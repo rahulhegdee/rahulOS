@@ -1,5 +1,5 @@
 export function classNames(
-	...classNames: ReadonlyArray<string | null | undefined>
+	...classNames: ReadonlyArray<string | undefined>
 ): string {
 	return classNames.filter(isNonNullable).join(" ");
 }

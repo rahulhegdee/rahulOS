@@ -1,12 +1,12 @@
 import styles from "./colors.module.scss";
 
-export const COLORS = {
-	Orange: styles.orange,
-	Blue: styles.blue,
-	Green: styles.green,
-	Purple: styles.purple,
-	Red: styles.red,
-	Yellow: styles.yellow,
-	Pink: styles.pink,
-	Black: styles.black,
+export const Colors = {
+	ORANGE: styles.orange,
+	BLUE: styles.blue,
+	GREEN: styles.green,
+	PURPLE: styles.purple,
+	RED: styles.red,
+	YELLOW: styles.yellow,
+	PINK: styles.pink,
+	BLACK: styles.black,
 };
