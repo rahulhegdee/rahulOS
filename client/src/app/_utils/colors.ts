@@ -9,4 +9,7 @@ export const Colors = {
 	YELLOW: styles.yellow,
 	PINK: styles.pink,
 	BLACK: styles.black,
+	TAN: styles.tan,
+	BLUE_GREEN: styles.blueGreen,
+	WHITE: styles.white,
 };

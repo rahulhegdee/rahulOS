@@ -12,14 +12,13 @@
 .dock {
 	border: 1px solid lightgray;
 	border-radius: 16px;
-	background-color: darkslategray;
+	background-color: rgba(209, 198, 185, 0.5);
 	margin-bottom: 5px;
 	max-width: 90%;
 	padding: 10px;
 
 	display: flex;
 	align-items: center;
-	// justify-content: center;
 	gap: 20px;
 
 	overflow-x: auto;
@@ -35,18 +34,55 @@
 	width: 50px;
 	cursor: pointer;
 
-	&:hover {
-		transform: scale(1.1);
-		transition: transform 0.2s ease-in-out;
+	position: relative;
+
+	&.disabled {
+		cursor: not-allowed;
 	}
 
-	&:active {
-		transform: scale(0.9);
-		transition: transform 0.1s ease-in-out;
+	&:not(.disabled) {
+		&:hover {
+			transform: scale(1.1);
+			transition: transform 0.2s ease-in-out;
+		}
+
+		&:active {
+			transform: scale(1);
+			transition: transform 0.1s ease-in-out;
+			filter: brightness(0.9);
+		}
 	}
 }
 
-.appContainer {
+.tooltipText {
 	font-size: small;
 	color: rgb(221, 233, 202);
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); // centers it
+	width: 90%; // adjust to fit your box
+	height: 90%;
+	pointer-events: none; // optional
+}
+
+.app2 {
+	width: 50px;
+	height: 50px;
+	background-color: blue; // ← this becomes the SVG's color
+	mask: url("../../public/test.svg") no-repeat center / contain;
+	-webkit-mask: url("../../public/test.svg") no-repeat center / contain;
+}
+
+.icon2 {
+	width: 100%; // or 100% if you want it to fill the box
+	height: 100%; // maintain aspect ratio
+	object-fit: contain;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }

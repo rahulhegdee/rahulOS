@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { Tooltip as ReactTooltip } from "radix-ui";
 
@@ -14,7 +12,7 @@ export const Tooltip = React.memo(function TooltipFn({
 }) {
 	return (
 		<ReactTooltip.Provider>
-			<ReactTooltip.Root>
+			<ReactTooltip.Root delayDuration={0}>
 				<ReactTooltip.Trigger asChild>{children}</ReactTooltip.Trigger>
 				<ReactTooltip.Portal>
 					<ReactTooltip.Content className="TooltipContent" sideOffset={5}>

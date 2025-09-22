@@ -5,7 +5,7 @@ import styles from "./layout.module.scss";
 import { classNames } from "./_utils/helpers";
 import { Colors } from "./_utils/colors";
 import React from "react";
-import { Tooltip } from "./_common/Tooltip2";
+import { Tooltip } from "./_common/Tooltip";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -39,8 +39,30 @@ export default function RootLayout({
 			>
 				<div className={styles.body}>{children}</div>
 				<div className={styles.dock}>
-					<App color={Colors.BLUE} title="Crog's World" />
-					<App color={Colors.YELLOW} title="Copy's Counter" />
+					<App
+						color={Colors.ORANGE}
+						title="About"
+						icon={<img src="/about.svg" alt="About" className={styles.icon} />}
+					/>
+					<App
+						color={Colors.WHITE}
+						title="System Settings"
+						icon={
+							<img src="/settings.svg" alt="About" className={styles.icon} />
+						}
+					/>
+					<App
+						color={Colors.BLUE_GREEN}
+						title="Crog's World"
+						icon={<img src="/test.svg" alt="About" className={styles.icon2} />}
+					/>
+					<App
+						color={Colors.TAN}
+						title="Copy's Counter"
+						icon={<img src="/copy.svg" alt="About" className={styles.icon} />}
+					/>
+					<App color={Colors.BLACK} title="TBD" disabled={true} />
+					<div className={classNames(styles.app2)}></div>
 				</div>
 			</body>
 		</html>
@@ -48,13 +70,28 @@ export default function RootLayout({
 }
 
 interface AppProps {
+	icon: React.JSX.Element;
 	color: string;
 	title: string;
+	disabled?: boolean;
 }
-const App = React.memo<AppProps>(function AppFn({ color, title }) {
+const App = React.memo<AppProps>(function AppFn({
+	icon,
+	color,
+	title,
+	disabled,
+}) {
 	return (
-		<Tooltip title={title} titleClassName={styles.appContainer}>
-			<div className={classNames(styles.app, color)}></div>
+		<Tooltip title={title} titleClassName={styles.tooltipText}>
+			<div
+				className={classNames(
+					styles.app,
+					{ [styles.disabled]: disabled },
+					color
+				)}
+			>
+				{icon}
+			</div>
 		</Tooltip>
 	);
 });
