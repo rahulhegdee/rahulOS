@@ -1,17 +1,28 @@
 "use client";
 
 import React from "react";
-import { Tooltip as ReactTooltip } from "react-tooltip";
-import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip as ReactTooltip } from "radix-ui";
 
 export const Tooltip = React.memo(function TooltipFn({
+	title,
 	children,
+	titleClassName,
 }: {
+	title: string;
 	children: React.ReactNode;
+	titleClassName?: string;
 }) {
 	return (
-		<ReactTooltip id="react-tooltip" content="Hello">
-			{children}
-		</ReactTooltip>
+		<ReactTooltip.Provider>
+			<ReactTooltip.Root>
+				<ReactTooltip.Trigger asChild>{children}</ReactTooltip.Trigger>
+				<ReactTooltip.Portal>
+					<ReactTooltip.Content className="TooltipContent" sideOffset={5}>
+						<div className={titleClassName}>{title}</div>
+						<ReactTooltip.Arrow className="TooltipArrow" />
+					</ReactTooltip.Content>
+				</ReactTooltip.Portal>
+			</ReactTooltip.Root>
+		</ReactTooltip.Provider>
 	);
 });

@@ -5,7 +5,7 @@ import styles from "./layout.module.scss";
 import { classNames } from "./_utils/helpers";
 import { Colors } from "./_utils/colors";
 import React from "react";
-import { Tooltip } from "./_common/Tooltip";
+import { Tooltip } from "./_common/Tooltip2";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -39,27 +39,8 @@ export default function RootLayout({
 			>
 				<div className={styles.body}>{children}</div>
 				<div className={styles.dock}>
-					<App color={Colors.BLUE} title="Copy's Counter" />
-					<div className={classNames(styles.app, Colors.PURPLE)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
-					<div className={classNames(styles.app, Colors.PINK)}></div>
+					<App color={Colors.BLUE} title="Crog's World" />
+					<App color={Colors.YELLOW} title="Copy's Counter" />
 				</div>
 			</body>
 		</html>
@@ -72,11 +53,8 @@ interface AppProps {
 }
 const App = React.memo<AppProps>(function AppFn({ color, title }) {
 	return (
-		<Tooltip>
-			<div className={styles.appContainer}>
-				<div className={classNames(styles.app, color)}></div>
-				{title}
-			</div>
+		<Tooltip title={title} titleClassName={styles.appContainer}>
+			<div className={classNames(styles.app, color)}></div>
 		</Tooltip>
 	);
 });

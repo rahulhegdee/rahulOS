@@ -6,14 +6,15 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"gen:scss": "typed-scss-modules src --camelCase --watch"
 	},
 	"dependencies": {
 		"next": "15.1.2",
+		"radix-ui": "^1.4.3",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
-		"sass": "^1.89.2",
-		"react-tooltip": "^5.29.0"
+		"sass": "^1.89.2"
 	},
 	"devDependencies": {
 		"@eslint/eslintrc": "^3",
@@ -22,6 +23,7 @@
 		"@types/react-dom": "^19",
 		"eslint": "^9",
 		"eslint-config-next": "15.1.2",
+		"typed-scss-modules": "^8.1.1",
 		"typescript": "^5"
 	}
 }
