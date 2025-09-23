@@ -12,4 +12,6 @@ export const Colors = {
 	TAN: styles.tan,
 	BLUE_GREEN: styles.blueGreen,
 	WHITE: styles.white,
+	GRAY: styles.gray,
+	BROWN: styles.brown,
 };

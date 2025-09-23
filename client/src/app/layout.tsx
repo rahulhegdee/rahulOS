@@ -37,6 +37,11 @@ export default function RootLayout({
 					styles.page
 				)}
 			>
+				<div className={styles.header}>
+					<img src="/home.svg" alt="Home" className={styles.headerIcon} />
+					<div className={styles.title}>RahulOS</div>
+					<div className={styles.subtitle}>Recents</div>
+				</div>
 				<div className={styles.body}>{children}</div>
 				<div className={styles.dock}>
 					<App
@@ -45,24 +50,32 @@ export default function RootLayout({
 						icon={<img src="/about.svg" alt="About" className={styles.icon} />}
 					/>
 					<App
-						color={Colors.WHITE}
+						color={Colors.GRAY}
 						title="System Settings"
 						icon={
-							<img src="/settings.svg" alt="About" className={styles.icon} />
+							<img src="/settings.svg" alt="Settings" className={styles.icon} />
 						}
 					/>
 					<App
-						color={Colors.BLUE_GREEN}
-						title="Crog's World"
-						icon={<img src="/test.svg" alt="About" className={styles.icon2} />}
+						color={Colors.WHITE}
+						title="Clog's World"
+						icon={
+							<img src="/bold-clog.svg" alt="Clog" className={styles.icon2} />
+						}
 					/>
 					<App
 						color={Colors.TAN}
 						title="Copy's Counter"
-						icon={<img src="/copy.svg" alt="About" className={styles.icon} />}
+						icon={<img src="/copy.svg" alt="Copy" className={styles.icon} />}
 					/>
-					<App color={Colors.BLACK} title="TBD" disabled={true} />
-					<div className={classNames(styles.app2)}></div>
+					<App
+						color={Colors.BROWN}
+						title="TBD"
+						disabled={true}
+						icon={
+							<img src="/question-two.svg" alt="TBD" className={styles.icon} />
+						}
+					/>
 				</div>
 			</body>
 		</html>

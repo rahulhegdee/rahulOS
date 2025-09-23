@@ -64,17 +64,9 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%); // centers it
-	width: 90%; // adjust to fit your box
-	height: 90%;
+	width: 75%; // adjust to fit your box
+	height: 75%;
 	pointer-events: none; // optional
-}
-
-.app2 {
-	width: 50px;
-	height: 50px;
-	background-color: blue; // ← this becomes the SVG's color
-	mask: url("../../public/test.svg") no-repeat center / contain;
-	-webkit-mask: url("../../public/test.svg") no-repeat center / contain;
 }
 
 .icon2 {
@@ -85,4 +77,37 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.header {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	width: 100%;
+	height: 30px;
+	background-color: rgb(217, 214, 214);
+
+	.title {
+		font-weight: 600;
+		font-size: 14px;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+			Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+			sans-serif;
+		color: black;
+	}
+
+	.subtitle {
+		font-weight: 400;
+		font-size: 14px;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+			Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+			sans-serif;
+		color: black;
+	}
+
+	.headerIcon {
+		margin-left: 20px;
+		width: 25px;
+		height: 25px;
+	}
 }
