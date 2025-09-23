@@ -3,4 +3,13 @@
 	justify-items: center;
 	font-family: var(--font-geist-sans);
 	height: 100%;
+	width: 100%;
+}
+
+.folderGrid {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
 }
