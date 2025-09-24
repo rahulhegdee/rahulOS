@@ -1,0 +1,17 @@
+.dock {
+	border: 1px solid lightgray;
+	border-radius: 16px;
+	background-color: rgba(209, 198, 185, 0.5);
+	margin-bottom: 5px;
+	max-width: 90%;
+	padding: 10px;
+
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	overflow-x: auto;
+	overflow-y: hidden;
+
+	z-index: 1;
+}

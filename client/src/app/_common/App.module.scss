@@ -1,0 +1,56 @@
+.app {
+	flex-shrink: 0;
+	border-radius: 16px;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+
+	position: relative;
+
+	&.large {
+		height: 65px;
+		width: 65px;
+	}
+
+	&.disabled {
+		cursor: not-allowed;
+	}
+
+	&:not(.disabled) {
+		&:hover {
+			transform: scale(1.1);
+			transition: transform 0.2s ease-in-out;
+		}
+
+		&:active {
+			transform: scale(1);
+			transition: transform 0.1s ease-in-out;
+			filter: brightness(0.9);
+		}
+	}
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); // centers it
+	width: 75%; // adjust to fit your box
+	height: 75%;
+	pointer-events: none; // optional
+
+	&.iconFill {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.appWithTitle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	font-size: 12px;
+	margin: 5px;
+	gap: 5px;
+}
