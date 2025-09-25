@@ -4,6 +4,8 @@ import "./globals.css";
 import styles from "./layout.module.scss";
 import { classNames } from "./_utils/helpers";
 import React from "react";
+import DesktopLayout from "./(desktop)/DesktopLayout";
+import LayoutWrapper from "./LayoutWrapper";
 
 const appleSystem = Geist({
 	variable: "--font-apple-system",
@@ -24,7 +26,9 @@ export default function RootLayout({
 	return (
 		<html lang="en" style={{ height: "100%" }}>
 			<body className={classNames(appleSystem.variable, styles.page)}>
-				<div className={styles.body}>{children}</div>
+				<div className={styles.body}>
+					<LayoutWrapper>{children}</LayoutWrapper>
+				</div>
 			</body>
 		</html>
 	);

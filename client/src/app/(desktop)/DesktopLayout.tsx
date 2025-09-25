@@ -1,4 +1,4 @@
-import styles from "./layout.module.scss";
+import styles from "./DesktopLayout.module.scss";
 import { Colors } from "../_utils/colors";
 import React from "react";
 import { App } from "../_common/App";
@@ -18,19 +18,31 @@ export default function DesktopLayout({
 			</div>
 			<div className={styles.body}>{children}</div>
 			<Dock>
-				<App color={Colors.ORANGE} title="About" iconSrc="/about.svg" />
+				<App
+					color={Colors.ORANGE}
+					title="About"
+					iconSrc="/about.svg"
+					href="/about"
+				/>
 				<App
 					color={Colors.GRAY}
 					title="System Settings"
 					iconSrc="/settings.svg"
+					href="/settings"
 				/>
 				<App
 					color={Colors.WHITE}
 					title="Clog's World"
 					iconSrc="/bold-clog.svg"
 					iconFill={true}
+					href="/clogs-world"
 				/>
-				<App color={Colors.TAN} title="Copy's Counter" iconSrc="/copy.svg" />
+				<App
+					color={Colors.TAN}
+					title="Copy's Counter"
+					iconSrc="/copy.svg"
+					href="/copys-counter"
+				/>
 				<App
 					color={Colors.BROWN}
 					title="TBD"

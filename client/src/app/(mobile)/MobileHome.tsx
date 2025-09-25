@@ -1,7 +1,7 @@
 import { App, AppWithTitle } from "../_common/App";
 import { Dock } from "../_common/Dock";
 import { Colors } from "../_utils/colors";
-import styles from "./page.module.scss";
+import styles from "./MobileHome.module.scss";
 import Markdown from "@/app/mdx-pages/Markdown.mdx";
 
 export default function MobileHome() {

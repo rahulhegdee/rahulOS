@@ -1,5 +1,5 @@
 import { Folder } from "../_common/Folder";
-import styles from "./page.module.scss";
+import styles from "./DesktopHome.module.scss";
 import Markdown from "@/app/mdx-pages/Markdown.mdx";
 
 export default function DesktopHome() {
