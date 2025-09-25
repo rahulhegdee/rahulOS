@@ -6,7 +6,7 @@ export default function CopysCounter() {
 		<DesktopAppWrapper
 			color="bisque"
 			title="Copy's Counter"
-			iconSrc="/copy.svg" // TODO: hmm this source is related to where the DesktopAppWrapper is used?
+			iconSrc="/love-copy.svg" // TODO: hmm this source is related to where the DesktopAppWrapper is used?
 		>
 			<div className={styles.page}>{"hello"}</div>
 		</DesktopAppWrapper>
