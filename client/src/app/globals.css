@@ -19,7 +19,7 @@ body {
 body {
 	color: var(--foreground);
 	background: var(--background);
-	background-image: url(../../public/mountains.jpg);
+	background-image: url(../../public/nasa.jpg);
 	background-size: cover; /* keeps full image visible */
 	background-position: center;
 	background-repeat: no-repeat;
@@ -42,11 +42,5 @@ a {
 @media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;
-	}
-}
-
-@media only screen and (max-width: 900px) {
-	body {
-		background-image: url(../../public/nasa.jpg);
 	}
 }

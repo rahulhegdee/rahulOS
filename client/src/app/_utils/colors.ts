@@ -14,4 +14,8 @@ export const Colors = {
 	WHITE: styles.white,
 	GRAY: styles.gray,
 	BROWN: styles.brown,
+	LIGHT_RED: styles.lightRed,
+	MUSTARD: styles.mustard,
+	LIME: styles.lime,
+	LIGHT_GREEN: styles.lightGreen,
 };
