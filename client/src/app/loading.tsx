@@ -1,3 +1,9 @@
+import styles from "./loading.module.scss";
+
 export default function Loading() {
-	return <div>Loading...</div>;
+	return (
+		<div className={styles.loading}>
+			<img src="/home.svg" alt="RahulOS" className={styles.icon} />
+		</div>
+	);
 }
